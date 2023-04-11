@@ -1,0 +1,26 @@
+html {
+  body {
+    font-family: $font;
+    color: $primary;
+  }
+
+  button {
+    background-color: rgb(185, 185, 180);
+    color: black;
+    font-family: $font;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2px;
+  }
+
+  .blue-button {
+    @extend button;
+    background-color: rgb(22, 95, 185);
+  }
+
+  .green-button {
+    @extend button;
+    background-color: rgb(27, 141, 80);
+  }
+}
