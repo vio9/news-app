@@ -2,4 +2,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
+}
+
+@mixin form {
+  padding: 20px;
 }

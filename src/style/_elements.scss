@@ -3,16 +3,55 @@ html {
     font-family: $font;
     color: $primary;
   }
+  form {
+    @include form;
+  }
+  .content {
+    @include vertical-list;
+    background-color: rgb(217, 220, 220);
+  }
+  .wrapper-character {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .img-chara {
+    max-width: 70%;
+    border-radius: 6px;
+  }
 
+  .character-cell {
+    background-color: rgb(169, 179, 164);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+  }
+  .donuts-wrapper {
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
   button {
     background-color: rgb(185, 185, 180);
     color: black;
     font-family: $font;
     border: none;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 2px;
-    max-width: 40px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   }
 
   .blue-button {
@@ -24,28 +63,9 @@ html {
     @extend button;
     background-color: rgb(27, 141, 80);
   }
-  .content {
-    @include vertical-list;
-    background-color: rgb(217, 220, 220);
-  }
-  .wrapper-character {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .img-chara {
-    max-width: 70%;
-    border-radius: 6px;
-  }
-
-  .character-cell {
-    background-color: rgb(149, 123, 157);
-    margin: 5px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-  .donuts-wrapper {
-    width: 60%;
+  .red-button {
+    @extend button;
+    background-color: rgb(169, 18, 81);
+    color: rgb(255, 255, 255);
   }
 }

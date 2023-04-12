@@ -29,7 +29,7 @@ function Search() {
   return (
     <>
       <form>
-        <label>Recherchez un personnage</label>
+        <label>Recherchez un personnage : </label>
         <input
           type='text'
           name='searchBar'
