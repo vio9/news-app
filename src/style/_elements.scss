@@ -12,6 +12,7 @@ html {
     margin: 10px;
     padding: 10px;
     border-radius: 2px;
+    max-width: 40px;
   }
 
   .blue-button {
@@ -22,5 +23,29 @@ html {
   .green-button {
     @extend button;
     background-color: rgb(27, 141, 80);
+  }
+  .content {
+    @include vertical-list;
+    background-color: rgb(217, 220, 220);
+  }
+  .wrapper-character {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .img-chara {
+    max-width: 70%;
+    border-radius: 6px;
+  }
+
+  .character-cell {
+    background-color: rgb(149, 123, 157);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .donuts-wrapper {
+    width: 60%;
   }
 }

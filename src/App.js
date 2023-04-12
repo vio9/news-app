@@ -1,13 +1,16 @@
 import './style/app.scss';
 import Search from './Search';
+import Charts from './charts/Charts';
 
 function App() {
   return (
     <div className='wrapper'>
       <h1>Card captor Game of throne</h1>
-      <header className='wrapper__btns'>
+      <div className='content'>
         <Search />
-      </header>
+      </div>
+      <div className='content'></div>
+      <Charts />
     </div>
   );
 }

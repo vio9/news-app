@@ -38,20 +38,22 @@ function Search() {
           onChange={handleSearch}
         ></input>
       </form>
-      {chara
-        .filter((item) => {
-          return item.fullName.includes(searchName);
-        })
-        .map((item) => {
-          return (
-            <Character
-              key={item.id}
-              house={item.family}
-              fullname={item.fullName}
-              image={item.imageUrl}
-            />
-          );
-        })}
+      <div className='wrapper-character'>
+        {chara
+          .filter((item) => {
+            return item.fullName.includes(searchName);
+          })
+          .map((item) => {
+            return (
+              <Character
+                key={item.id}
+                house={item.family}
+                fullname={item.fullName}
+                image={item.imageUrl}
+              />
+            );
+          })}
+      </div>
     </>
   );
 }
