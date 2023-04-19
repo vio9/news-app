@@ -1,4 +1,5 @@
 import Charts from './charts/Charts';
+import GoogleChart from './charts/GoogleChart';
 import Recharts from './charts/Recharts';
 import Nav from './othersComponents/Nav';
 
@@ -7,6 +8,10 @@ function Coucou() {
     <div>
       Charts
       <Nav />
+      <div className='content'>
+        <h3>test google donut chart </h3>
+        <GoogleChart />
+      </div>
       <div className='content'>
         <h3>test de donuts rechart</h3>
         <Recharts />
