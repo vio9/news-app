@@ -6,6 +6,15 @@ html {
   form {
     @include form;
   }
+
+  .nav {
+    display: flex;
+  }
+
+  .link {
+    padding: 5px;
+  }
+
   .content {
     @include vertical-list;
     background-color: rgb(217, 220, 220);

@@ -1,23 +1,15 @@
 import './style/app.scss';
-import Search from './Search';
-import Charts from './charts/Charts';
-import Recharts from './charts/Recharts';
-
+import Home from './Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Coucou from './Coucou';
 function App() {
   return (
-    <div className='wrapper'>
-      <h1> ❄️ Card captor Game of throne 🐺</h1>
-      <div className='content'>
-        <Recharts />
-      </div>
-      <div className='content'>
-        <Charts />
-      </div>
-
-      <div className='content'>
-        <Search />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='coucou' element={<Coucou />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
