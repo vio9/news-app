@@ -8,9 +8,11 @@ function Coucou() {
       Charts
       <Nav />
       <div className='content'>
+        <h3>test de donuts rechart</h3>
         <Recharts />
       </div>
       <div className='content'>
+        <h3>test de donuts react-chartjs-2</h3>
         <Charts />
       </div>
     </div>

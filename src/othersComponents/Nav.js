@@ -6,7 +6,7 @@ function Nav() {
         Home{' '}
       </Link>
       <Link className='link' to='coucou'>
-        coucou
+        Charts
       </Link>
     </div>
   );
