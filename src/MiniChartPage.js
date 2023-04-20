@@ -5,32 +5,36 @@ function MiniChartPage() {
     {
       label: 'men jon snow kills',
       value: 65,
-      color: 'blue',
     },
     {
       label: 'men dany snow kills',
       value: 100,
-      color: 'red',
     },
     {
       label: 'men Arya kills',
       value: 15,
-      color: 'green',
     },
     {
       label: 'men the hound kills',
       value: 25,
-      color: 'black',
     },
   ];
-
+  const strokeColor = '#FFFFFF';
+  const colors = ['#A8E9B6', '#23BCEB', '#C181F5', '#F58580'];
   const selectedOffset = 0;
+  const reactDonutChartInnerRadius = 0.6;
 
   return (
     <>
       <Nav />
       <div>react donut chart test</div>
-      <DonutChart selectedOffset={selectedOffset} data={data} />
+      <DonutChart
+        selectedOffset={selectedOffset}
+        data={data}
+        innerRadius={reactDonutChartInnerRadius}
+        colors={colors}
+        strokeColor={strokeColor}
+      />
     </>
   );
 }
