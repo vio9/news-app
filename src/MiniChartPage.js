@@ -28,13 +28,15 @@ function MiniChartPage() {
     <>
       <Nav />
       <div>react donut chart test</div>
-      <DonutChart
-        selectedOffset={selectedOffset}
-        data={data}
-        innerRadius={reactDonutChartInnerRadius}
-        colors={colors}
-        strokeColor={strokeColor}
-      />
+      <div className='mini-chart-wrapper'>
+        <DonutChart
+          selectedOffset={selectedOffset}
+          data={data}
+          innerRadius={reactDonutChartInnerRadius}
+          colors={colors}
+          strokeColor={strokeColor}
+        />
+      </div>
     </>
   );
 }
