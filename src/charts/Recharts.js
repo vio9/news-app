@@ -22,7 +22,7 @@ export default function Recharts() {
   return (
     <ResponsiveContainer width='99%' aspect={2}>
       <PieChart>
-        <Legend verticalAlign='top' height={4} />
+        <Legend verticalAlign='bottom' align='left' iconType='circle' />
         <Pie
           dataKey='value'
           isAnimationActive={false}

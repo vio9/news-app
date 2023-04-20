@@ -8,6 +8,9 @@ function Nav() {
       <Link className='link' to='coucou'>
         Charts
       </Link>
+      <Link className='link' to='mini chart'>
+        Mini Chart
+      </Link>
     </div>
   );
 }

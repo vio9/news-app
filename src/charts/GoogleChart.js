@@ -20,11 +20,23 @@ function GoogleChart() {
     title: 'temps ecrans persos GOT',
     pieHole: 0.3,
     is3D: false,
+    colors: ['#D7BBEB', '#E6C4A6', '#58ADF5', '#09D9A1', '#489AE8', '#BFB1DB'],
+    legend: {
+      position: 'right',
+      alignment: 'center',
+    },
+    chartArea: {
+      left: 10,
+      top: 10,
+      width: '130%',
+      height: '65%',
+    },
   };
   const options2 = {
     title: 'chart ex 2',
     pieHole: 0.3,
     is3D: false,
+    colors: ['#09D9A1', '#02A6E6', '#D4A6E6'],
   };
 
   return (
