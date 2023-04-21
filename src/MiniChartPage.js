@@ -5,12 +5,20 @@ import { useEffect, useState } from 'react';
 
 function MiniChartPage() {
   const [datas, setDatas] = useState([]);
-
+  const [number, setNumber] = useState([]);
   async function getDatas() {
     try {
       let res = await axios.get('https://fakestoreapi.com/products?limit=5');
-      setDatas(res.data);
+      setDatas([res.data]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  async function getNUmbers() {
+    try {
+      let res = await axios.get('http://numbersapi.com/random/math');
       console.log(res.data);
+      setNumber(res.data);
     } catch (error) {
       console.log(error);
     }
@@ -18,6 +26,7 @@ function MiniChartPage() {
 
   useEffect(() => {
     getDatas();
+    getNUmbers();
   }, []);
   const data = [
     {
@@ -63,10 +72,12 @@ function MiniChartPage() {
               <h3>{item.title}</h3>
               <br />
               <p>prix : {item.price}</p>
+              <p>description : {item.description}</p>
               <img className='img-data' src={item.image} />
             </div>
           );
         })}
+        <div></div>
       </div>
     </>
   );
