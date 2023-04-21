@@ -1,7 +1,7 @@
 import './style/app.scss';
 import Search from './Search';
 import Nav from './othersComponents/Nav';
-import { Link } from 'react-router-dom';
+
 function Home() {
   return (
     <div className='wrapper'>

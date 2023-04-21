@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='coucou' element={<Coucou />} />
-        <Route path='mini chart' element={<MiniChartPage />} />
+        <Route path='minichart' element={<MiniChartPage />} />
       </Routes>
     </BrowserRouter>
   );

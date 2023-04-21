@@ -79,5 +79,10 @@ html {
 
   .mini-chart-wrapper {
     display: flex;
+    flex-direction: column;
+  }
+  .img-data {
+    width: 30%;
+    display: flex;
   }
 }

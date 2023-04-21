@@ -8,7 +8,7 @@ function Nav() {
       <Link className='link' to='coucou'>
         Charts
       </Link>
-      <Link className='link' to='mini chart'>
+      <Link className='link' to='minichart'>
         Mini Chart
       </Link>
     </div>

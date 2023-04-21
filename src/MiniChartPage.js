@@ -1,6 +1,24 @@
 import Nav from './othersComponents/Nav';
 import DonutChart from 'react-donut-chart';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 function MiniChartPage() {
+  const [datas, setDatas] = useState([]);
+
+  async function getDatas() {
+    try {
+      let res = await axios.get('https://fakestoreapi.com/products?limit=5');
+      setDatas(res.data);
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    getDatas();
+  }, []);
   const data = [
     {
       label: 'men jon snow kills',
@@ -36,6 +54,19 @@ function MiniChartPage() {
           colors={colors}
           strokeColor={strokeColor}
         />
+      </div>
+      <div className='mini-chart-wrapper'>
+        coucou
+        {datas.map((item) => {
+          return (
+            <div className='content' key={item.id}>
+              <h3>{item.title}</h3>
+              <br />
+              <p>prix : {item.price}</p>
+              <img className='img-data' src={item.image} />
+            </div>
+          );
+        })}
       </div>
     </>
   );
